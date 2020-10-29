@@ -1,0 +1,80 @@
+
+<% include ../partials/header.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-8">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="TitleTextField">Boot Title</label>
+                    <input type="text" class="form-control"
+                    id = "TitleTextField"
+                    placeholder="Enter the Book Title"
+                    name="Title"
+                    value ="<%= book.Title %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="AuthorTextFeild">Author</label>
+                    <input type="text" class="form-control"
+                    id = "AuthorTextFeild"
+                    placeholder="Enter the Author"
+                    name="Author"
+                     value ="<%= book.Author %>"
+                    required>                    
+                </div>
+
+                
+
+
+                <div class="form-group">
+                    <label for="DescTextFeilds">Description</label>
+                    <textarea type="text" class="form-control"
+                    id = "DescTextFeilds"
+                    placeholder="Description "                    
+                    name="Description"
+                    
+                    required><%= book.Description %></textarea>                    
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="PriceTextFeilds">Price</label>
+                    <input type="number" class="form-control"
+                    id = "PriceTextFeilds"
+                    placeholder="Price: "
+                    name="Price"
+                      value ="<%= book.Price %>"
+                    required>                    
+                </div>
+
+                <div class="form-group">
+                    <label for="GenreTextFeilds">Genre</label>
+                    <input type="text" class="form-control"
+                    id = "GenreTextFeilds"
+                    placeholder="Genre: "
+                    name="Genre"
+                      value ="<%= book.Genre %>"
+                    required>                    
+                </div>
+
+
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                    
+                    <a href="/books" class="btn btn-warning">
+                        <i class="fas fa-undo">Cancel</i></a>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+<% include ../partials/footer.ejs %>
